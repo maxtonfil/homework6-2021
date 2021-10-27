@@ -11,9 +11,10 @@ body{
     
 }
 
-a, a:visited{
+a:link, a:visited{
     color: #0000ff;
 }
+
 
 body>header{
     display: flex;
