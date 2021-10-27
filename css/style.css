@@ -15,7 +15,7 @@ a, a:visited{
     color: #0000ff;
 }
 
-header{
+body>header{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -43,6 +43,7 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .gallery > img{
@@ -72,6 +73,7 @@ header{
     }
 }
 
+
 #logo{
     animation-name: logo-animation;
     animation-duration: 5s;
@@ -100,5 +102,11 @@ header{
     .card, .card_big{
         flex-basis: 250px
     }
+
+    .card>header{
+        display: flex;
+    }
+
+    
 
 }
