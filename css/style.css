@@ -11,6 +11,14 @@ body{
     
 }
 
+span{
+    display: none;
+}
+
+#logo{
+    width: 450px;
+}
+
 a:link, a:visited{
     color: #0000ff;
 }
@@ -75,6 +83,7 @@ body>header{
 }
 
 
+
 #logo{
     animation-name: logo-animation;
     animation-duration: 5s;
@@ -108,6 +117,72 @@ body>header{
         display: flex;
     }
 
-    
 
 }
+
+@media print{
+    .gallery{
+        display: none;
+    }
+
+    #gallery{
+        display: none;
+    }
+
+    body{
+        background-image: none;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .card{
+        flex-basis: 250px;
+        
+        flex-wrap: nowrap;
+    }
+
+    .pricing{
+        align-items: flex-end;
+        flex-wrap: nowrap;
+        flex-direction: row;
+
+    }
+
+    .card>header{
+        display: block;
+    }
+
+    nav{
+        width: 100%;
+    }
+
+    .nav_links{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    body>header{
+        flex-direction: column;
+    }
+
+    span{
+        display: inline-block;
+    }
+
+    .pricing li{
+        display:inline-block;
+    }
+
+    #logo{
+        animation-name: none;
+    }
+}
+
+
+@media screen and (prefers-reduced-motion: reduce){
+    #logo{
+        animation-name: none;
+    }
+}
+
