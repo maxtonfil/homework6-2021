@@ -1,0 +1,104 @@
+body{
+    font-family: "Alegreya Sans SC", serif;
+    
+    background-image: url("../images/concrete_seamless.png");
+    background-color:#f1f1f1;   
+}
+
+.nav_links{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+a, a:visited{
+    color: #0000ff;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card > header{
+    background-color: #288088;
+    border-style: solid;
+    border-color: #45adad;
+    border-width: 2px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+} 
+
+.card, .card_big{
+    flex-basis: 450px;
+    width: 450px;
+}
+
+.pricing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery > img{
+    border-style: solid;
+    border-color: #50c7c7;
+    border-width: 10px;
+    margin: 10px;
+    width: 300px;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@keyframes logo-animation{
+    from{
+        opacity: 0;
+        width: 50px;
+    }
+
+    to{
+        opacity: 1;
+        width: 450px;
+    }
+}
+
+#logo{
+    animation-name: logo-animation;
+    animation-duration: 5s;
+}
+
+@media only screen and (min-width: 850px){
+    body > header{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        position: sticky;
+        top: 0;
+    }
+
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .pricing{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card, .card_big{
+        flex-basis: 250px
+    }
+
+}
